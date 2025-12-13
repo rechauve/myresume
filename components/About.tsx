@@ -26,11 +26,8 @@ export default function About() {
 
   const certifications = [
     'Microsoft Certified: Azure Solutions Architect Expert',
+    'Microsoft Certified: Azure Network Engineer Associate',
     'Microsoft Certified: Azure Administrator Associate',
-    'Microsoft Certified: Azure Security Engineer Associate',
-    'Microsoft Certified: DevOps Engineer Expert',
-    'Certified Kubernetes Administrator (CKA)',
-    'HashiCorp Certified: Terraform Associate',
   ]
 
   return (

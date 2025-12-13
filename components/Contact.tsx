@@ -5,29 +5,29 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'contact@example.com',
-      href: 'mailto:contact@example.com',
+      value: 'rechauve@gmail.com',
+      href: 'mailto:rechauve@gmail.com',
       description: 'Send me an email anytime',
     },
     {
       icon: Linkedin,
       title: 'LinkedIn',
-      value: 'linkedin.com/in/cloudarchitect',
-      href: 'https://linkedin.com',
+      value: 'linkedin.com/in/remichauvet',
+      href: 'https://linkedin.com/in/remichauvet',
       description: 'Connect with me professionally',
     },
     {
       icon: Github,
       title: 'GitHub',
-      value: 'github.com/cloudarchitect',
-      href: 'https://github.com',
+      value: 'github.com/rechauve',
+      href: 'https://github.com/rechauve',
       description: 'Check out my projects and contributions',
     },
     {
       icon: MessageSquare,
       title: 'Twitter',
       value: '@cloudarchitect',
-      href: 'https://twitter.com',
+      href: 'https://x.com/RmiChauvet',
       description: 'Follow me for cloud insights',
     },
   ]
@@ -94,7 +94,7 @@ export default function Contact() {
               For now, please reach out to me directly via email or social media.
             </p>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:rechauve@gmail.com"
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-azure-600 hover:bg-azure-700 transition-colors"
             >
               <Mail className="w-5 h-5 mr-2" />
@@ -115,13 +115,13 @@ export default function Contact() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:contact@example.com"
+                href="mailto:rechauve@gmail.com"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-azure-600 transition-colors"
               >
                 Schedule a Consultation
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/remichauvet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-azure-600 transition-colors"
