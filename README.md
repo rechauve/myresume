@@ -183,7 +183,7 @@ This project is open source and available under the [MIT License](LICENSE).
 **Cloud Architect**
 
 - Website: [https://yourdomain.com](https://yourdomain.com)
-- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com)
+- LinkedIn: [linkedin.com/in/remichauvet](https://linkedin.com/in/remichauvet)
 - GitHub: [@rechauve](https://github.com/rechauve)
 
 ## 🙏 Acknowledgments
