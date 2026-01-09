@@ -25,7 +25,6 @@ export default function Skills() {
         'Microservices Architecture',
         'Serverless Computing',
         'Event-Driven Architecture',
-        'CQRS Pattern',
         'Domain-Driven Design',
         'Cloud-Native Patterns',
         'API Design',
@@ -39,8 +38,9 @@ export default function Skills() {
       skills: [
         'Azure DevOps',
         'GitHub Actions',
+        'GitLab CI/CD',
         'Terraform',
-        'Bicep',
+        'OpenTofu',
         'Docker',
         'Kubernetes',
         'Helm Charts',
