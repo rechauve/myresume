@@ -28,6 +28,7 @@ export default function About() {
     'Microsoft Certified: Azure Solutions Architect Expert',
     'Microsoft Certified: Azure Network Engineer Associate',
     'Microsoft Certified: Azure Administrator Associate',
+    'Microsoft Certified : Security, Compliance, and Identity Fundamentals',
   ]
 
   return (
