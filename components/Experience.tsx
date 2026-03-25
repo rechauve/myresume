@@ -18,6 +18,7 @@ export default function Experience() {
         'OpenTofu',
         'Datadog',
         'GitLab CI/CD',
+        'Ansible',
       ],
       achievements: [
         'Recovery of control and management',
@@ -29,10 +30,10 @@ export default function Experience() {
     {
       title: 'Microservices Platform Architecture',
       role: 'Senior Cloud Architect',
-      company: 'E-Commerce Technology Leader',
-      duration: '2020 - 2022',
+      company: 'Outdoor Advertising Company',
+      duration: '2024 - 2025',
       location: 'Hybrid',
-      description: 'Designed and implemented a cloud-native microservices platform supporting high-traffic e-commerce operations.',
+      description: 'Migrated web applications from AWS to Azure.',
       technologies: [
         'Azure Kubernetes Service',
         'Service Bus',
@@ -41,6 +42,9 @@ export default function Experience() {
         'Event Grid',
         'Docker',
         'Helm',
+        'Git',
+        'OpenTofu',
+        'Ansible',
       ],
       achievements: [
         'Architected scalable microservices handling 10K+ requests per second',
