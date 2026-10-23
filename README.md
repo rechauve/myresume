@@ -142,6 +142,18 @@ Edit the following files to customize your content:
    - Push to the `main` branch
    - GitHub Actions will automatically build and deploy
 
+### Custom Domain
+
+The custom domain `myresume.chvt.fr` is configured by the `configure_custom_domain_job` job (runs on push to `main`, after deployment).
+
+**DNS prerequisite:** create a CNAME record `myresume.chvt.fr` -> the Static Web App default hostname (`*.azurestaticapps.net`).
+
+**Required GitHub configuration** (OIDC login via `azure/login@v2`):
+- Secrets: `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_SUBSCRIPTION_ID` (the service principal needs rights to manage the Static Web App)
+- Variables: `AZURE_STATIC_WEB_APP_NAME`, `AZURE_RESOURCE_GROUP`
+
+**Manual alternative (one-time):** Azure Portal > Static Web App > Custom domains > Add.
+
 ### Manual Build and Deploy
 
 ```bash
