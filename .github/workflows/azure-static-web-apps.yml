@@ -9,6 +9,9 @@ on:
     branches:
       - main
 
+env:
+  CUSTOM_DOMAIN: myresume.chvt.fr
+
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
@@ -55,3 +58,38 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           action: "close"
+
+  configure_custom_domain_job:
+    if: github.event_name == 'push'
+    needs: build_and_deploy_job
+    runs-on: ubuntu-latest
+    name: Configure Custom Domain Job
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Ensure custom domain is configured
+        env:
+          SWA_NAME: ${{ vars.AZURE_STATIC_WEB_APP_NAME }}
+          RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP }}
+        run: |
+          existing=$(az staticwebapp hostname list \
+            --name "$SWA_NAME" \
+            --resource-group "$RESOURCE_GROUP" \
+            --query "[?name=='$CUSTOM_DOMAIN'].name" -o tsv)
+          if [ -z "$existing" ]; then
+            az staticwebapp hostname set \
+              --name "$SWA_NAME" \
+              --resource-group "$RESOURCE_GROUP" \
+              --hostname "$CUSTOM_DOMAIN" \
+              --validation-method cname-delegation
+          else
+            echo "Custom domain $CUSTOM_DOMAIN already configured."
+          fi
