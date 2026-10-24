@@ -77,8 +77,8 @@ jobs:
 
       - name: Ensure custom domain is configured
         env:
-          SWA_NAME: ${{ vars.AZURE_STATIC_WEB_APP_NAME }}
-          RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP }}
+          SWA_NAME: ${{ vars.AZURE_STATIC_WEB_APP_NAME || 'myresume' }}
+          RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP || 'myresume-rg' }}
         run: |
           existing=$(az staticwebapp hostname list \
             --name "$SWA_NAME" \
