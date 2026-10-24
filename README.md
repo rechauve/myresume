@@ -150,7 +150,7 @@ The custom domain `myresume.chvt.fr` is configured by the `configure_custom_doma
 
 **Required GitHub configuration** (OIDC login via `azure/login@v2`):
 - Secrets: `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_SUBSCRIPTION_ID` (the service principal needs rights to manage the Static Web App)
-- Variables: `AZURE_STATIC_WEB_APP_NAME`, `AZURE_RESOURCE_GROUP`
+- Optional variables: `AZURE_STATIC_WEB_APP_NAME`, `AZURE_RESOURCE_GROUP` (default to `myresume` and `myresume-rg`, respectively)
 
 **Manual alternative (one-time):** Azure Portal > Static Web App > Custom domains > Add.
 
